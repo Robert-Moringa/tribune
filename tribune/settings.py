@@ -102,6 +102,11 @@ WSGI_APPLICATION = 'tribune.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
+HOST='127.0.0.1'
+MODE='dev' #set to 'prod' in production
+ALLOWED_HOSTS='.localhost', '.herokuapp.com', '.127.0.0.1'
+DISABLE_COLLECTSTATIC=1
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
