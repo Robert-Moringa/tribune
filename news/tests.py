@@ -21,6 +21,22 @@ class EditorTestClass(TestCase):
         editors = Editor.objects.all()
         self.assertTrue(len(editors) > 0)
 
+
+        # testing
+
+    #  def test_update(self):
+    #     location = Location.get_location_id(self.loc.id)
+    #     location.update_location('Donholm')
+    #     location = Location.get_location_id(self.loc.id)
+    #     self.assertTrue(location.name == 'Donholm')
+
+    def test_update_method(self):
+        self.james.save_editor()
+        self.james.last_name='Kamau'
+        self.james.update_editor()
+        editors = Editor.objects.all()
+        self.assertTrue(len(editors) > 0)
+
 class ArticleTestClass(TestCase):
 
     def setUp(self):
