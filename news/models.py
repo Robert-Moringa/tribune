@@ -14,13 +14,8 @@ class Editor(models.Model):
     def save_editor(self):
         self.save()
 
-
-# # update
-#     def update_category(self, update):
-#         self.name = update
-#         self.save()
     def update_editor(self, update):
-        self.first_name=update
+        self.last_name=update
         self.save()
 
     class Meta:
